@@ -1,5 +1,5 @@
-<?php include('header_footer/header1.php');?>
-<?php include ('database/conn.php');?>
+<?php include('../header_footer/header1.php');?>
+<?php include ('../database/conn.php');?>
 
 <?php
 $failed = "";
@@ -7,7 +7,7 @@ $failed = "";
   {
     $filename = $_FILES['myfile']['name'];
     $file_size = $_FILES['myfile']['size'];
-    $fileUploadPath = "image/";
+    $fileUploadPath = "../image/";
     $file_ext = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
     if($file_ext != "jpg" && $file_ext != "png" && $file_ext != "jpeg")
@@ -36,7 +36,7 @@ $failed = "";
     }*/
     if(empty($failed) == true)
     {
-      move_uploaded_file($file_tmp,"image/".$file_name);
+      move_uploaded_file($file_tmp,"../image/".$file_name);
       echo "Success";
     }
   }
@@ -79,4 +79,4 @@ else
   echo " Please Selects All Field <b>";
 
 ?>
-<center><a href="StudentReg.php">Back</a></center>
+<center><a href="../StudentReg.php">Back</a></center>
