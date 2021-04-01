@@ -1,0 +1,54 @@
+input[type=text], input[type=password] 
+{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button 
+{
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover 
+{
+  opacity: 0.8;
+}
+
+.imgcontainer 
+{
+  text-align: center;
+  margin: 10px 0 6px 0;
+
+  width: 97%;
+}
+
+img.avatar 
+{
+  width: 10%;
+  border-radius: 20%;
+}
+
+.container 
+{
+  background-color: #5F9EA0;
+  padding: 10px;
+  width: 95%;
+}
+
+@media screen and (max-width: 500px) 
+{
+  span.psw 
+  {
+     display: block;
+     float: none;
+  }
+}
