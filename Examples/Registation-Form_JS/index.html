@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Javascript Registration form</title>
+		<script type="text/javascript" src="js/JS.js" ></script>
+		<LINK REL="StyleSheet" HREF="css/css.css">
+		
+		
+
+<body>
+</head>
+
+</body>
+
+<! top part of the form >
+<form name='top' > 
+<h1> Registration Form </h1>
+<div id='step1'> <h3 class='highlight'> Step 1: Fill in log in details </h3> </div>
+<div id='step2'> <h3 class='highlight'> Step 2: Fill in personal details </h3> </div>
+<div id='step3'> <h3 class='highlight'> Step 3: Confirm registration details </h3> </div>
+<div id='registration' >
+</form>
+
+<! Step 1 of the registration form >
+<form name='registration' > 
+<h2> Log in Information </h2>
+<ul>
+<li><label for="userid">* Login Id:</label></li>  
+<li><input type="text" name="userid" ID="ID" size="15 " onkeyup="checkform()" /></li> 
+
+<li><label for="userEmail">* Email:</label></li>  
+<li><input type="text" name="userEmail" ID="Email" size="20" onkeyup="checkform()" /></li> 
+
+<li><label for="userPassword">* Password:</label></li>  
+<li><input type="text" name="userPassword" ID="Password" size="20" onkeyup="checkform()" /></li> 
+
+<li><label for="userPassword2">* Confirm Password:</label></li>  
+<li><input type="text" name="userPassword2" ID="Password2" size="20" onkeyup="checkform()" /></li> 
+<div class="required">* = required</div> 
+
+<li><input type="button" name="submit" ID="submit" value="Submit" onclick="Submit()" disabled /></li>
+
+	
+
+
+</ul>
+</div>
+</form>
+
+<! Step 2 of the registration form >
+<form name='registration2' > 
+<div id='registration2' style="display: none">
+<li><h2> Personal data </h2></li>
+<ul>
+<li><label for="userName">* Name:</label></li>  
+<li><input type="text" name="userName" ID="PName" size="12 " onkeyup="checkform2()"  /></li> 
+<li><label for="userDOB">* Date of Birth:</label></li>  
+
+<! Date of birth code, uses javascript.>
+<select id="dd">
+
+        <option value="dd">DD</option>
+
+        <script>
+
+   for(var i=1;i<32;i++)
+
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+
+   </script>
+
+        </select>
+
+                </select>
+
+                 <select id="mmm">
+
+         <option value="mmm">MMM</option>
+
+         <option value="0">JAN</option>
+
+         <option value="1">FEB</option>
+
+         <option value="2">MAR </option>
+
+         <option value="3">APR</option>
+
+         <option value="4">MAY</option>
+
+         <option value="5">JUN</option>
+
+         <option value="6">JUL</option>
+
+         <option value="7">AUG</option>
+
+         <option value="8">SEP</option>
+
+         <option value="9">OCT</option>
+
+         <option value="10">NOV</option>
+
+        <option value="11">DEC</option>
+
+        </select>
+
+        <select id="yyyy">
+
+           <option value="yyyy"selected>YYYY</option>
+
+        <script type="text/javascript">
+
+   var dt= new Date();
+
+   for(var i=1930;i<=dt.getFullYear();i++)
+
+    document.write("<option value='"+i+"'>" + i+"</option> ");
+
+  </script>
+
+  </select>
+
+	 <li><label for="Addinfo">Additional Information:</label></li> 
+	 <li><textarea type="textarea" size="100" name="addInfo" id="addinfo" onkeyup="textCounter()" maxlength="512" onkeyup="checkform2()" ></textarea></li>
+	 <div class="textarea_feedback" id="textarea_feedback">512 characters remaining</div>
+	 <div class="required">* = required</div>
+	 <li><input type="button" name="submit" ID="submit2" value="Submit" onclick="Submit2()"  disabled /></li>
+	 <input type="button" name="submit" ID="submit2" value="Back" onclick="back1()"   />
+</ul>
+</div>
+</form>
+
+<! Step 3 of the registration form >
+<form name='registration3' > 
+<div id='CompleteReg' style="display: none">
+<h2> Confirm Details </h2>
+<ul>
+<li><label for="userid">Login Id:</label></li>  
+<li><input type="text" name="userid" ID="ID1" size="12 " disabled /></li>
+<li><label for="userEmail">Email:</label></li>  
+<li><input type="text" name="userEmail" ID="Email1" size="20" disabled /></li> 
+<li><label for="userPassword">Password:</label></li>  
+<li><input type="text" name="userPassword" ID="Password1" size="20" disabled /></li> 
+<li><label for="userName">Name:</label></li>  
+<li><input type="text" name="userName" ID="PName1" size="12 " disabled  /></li> 
+<li><label for="dob">Date of Birth:</label></li>  
+<li><input type="text" name="dateofbirth" ID="DOB1" size="12 " disabled /></li>
+<li><label for="Addinfo">Additional Information:</label></li> 
+	 <textarea type="textarea" size="100" name="addInfo" id="addinfo1"  maxlength="512" disabled ></textarea>
+	 <li><input type="button" name="submit" ID="Confirm1" value="Confirm" onclick="confirm1()" /></li>
+	 <input type="button" name="submit" ID="submit2" value="Back" onclick="back2()"   />
+	 
+</ul>
+</div>
+</form>
+
+<! Confirmation of sent details >
+<form name='Finish'> 
+<div id='FinishReg' style="display: none">
+<li> <h2> Registration details confirmed </h2> </li>
+<li> <h2> Thank you for registering! </h2> </li>
+</div>
+</form>
+
+
+
+</html>
